@@ -23,7 +23,7 @@ class NeuralNetwork(object):
 
         #### Set this to your implemented sigmoid function ####
         # Activation function is the sigmoid function
-        self.activation_function = lambda x: self.sigmoid(x)
+        self.activation_function = self.sigmoid
 
 
 
@@ -72,5 +72,3 @@ class NeuralNetwork(object):
         final_outputs = final_inputs # signals from final output layer
 
         return final_outputs
-   
-

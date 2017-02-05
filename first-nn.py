@@ -45,12 +45,17 @@ def MSE(y, Y):
 
 import unittest
 
+
+
 inputs = [0.5, -0.2, 0.1]
 targets = [0.4]
 test_w_i_h = np.array([[0.1, 0.4, -0.3],
                        [-0.2, 0.5, 0.2]])
 test_w_h_o = np.array([[0.3, -0.1]])
 
+network = NeuralNetwork(3, 2, 1, 0.5)
+        # Test that the activation function is a sigmoid
+print (np.all(network.activation_function(0.5) == 1/(1+np.exp(-0.5))))
 
 network = NeuralNetwork(3, 2, 1, 0.5)
 network.weights_input_to_hidden = test_w_i_h.copy()
